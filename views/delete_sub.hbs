@@ -1,0 +1,28 @@
+<h1>{{ title }}</h1>
+<table>
+    <tr>
+        <td>sub_id</td>
+        <td>sub_name</td>
+        <td>student_num</td>
+    </tr>
+    {{#each subject}}
+    <form method="post">
+        <tr>
+            <td>{{sub_id}}</td>
+            <td>{{sub_name}}</td>
+            <td>{{student_num}}</td>
+            <td style="border: none; margin-left: 10px;">
+                <button 
+                style="margin-left: 10px;" 
+                name='sub_id' 
+                type="submit"  
+                value="{{sub_id}}" 
+                formaction="/delete_sub"
+                >
+                삭제
+                </button>
+            </td>
+        </tr> 
+    </form>
+    {{/each}}
+</table>
